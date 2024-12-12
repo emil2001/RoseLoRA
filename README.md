@@ -11,14 +11,14 @@
 ## Использование
 Реализация алгоритма `RoseLoRA` и описание доступных аргументов находятся в `src\rose_lora.py`. Запуск метода на основе библиотек HuggingFace осуществляется всего двумя строками кода.
 Создание модели:
-```
+```python
 from src.rose_lora import RoseLoraModel
 base_model = ... #любая модель из transformers
 peft_config = LoraConfig(...) #конфигурация LoRA из peft
 roselora_model = RoseLoraModel(base_model, peft_config, total_step = max_epochs * iter_in_epoch)
 ```
 Тренировка (необходим любой кастомный trainer):
-```
+```python
 ...
 opt.step()
 self.model.update_and_allocate(i_step) #здесь i_step - номер итерации
