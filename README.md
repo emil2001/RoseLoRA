@@ -20,7 +20,7 @@ roselora_model = RoseLoraModel(base_model, peft_config, total_step = max_epochs 
 ```
 ...
 opt.step()
-self.model.update_and_allocate(self.i_step)
+self.model.update_and_allocate(i_step) #здесь i_step - номер итерации
 ...
 ```
 
