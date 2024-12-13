@@ -1,0 +1,18 @@
+alg_name: "RoseLoRA"
+model_name: "../hugging_cache/gpt2"
+device: 0
+
+lora_type: "lora"
+layers: []
+num_steps: 10
+batch_size: 1
+max_length: 30
+lr: 5e-3
+weight_decay: 0
+kl_factor: 0
+rank: 4
+lora_alpha: 16
+lora_dropout: 0.1
+norm_constraint: false
+target_modules: ["c_attn"] 
+model_parallel: false
